@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play Monster Survivors - an exciting online survival game with hordes of monsters and power-ups">
+    <title>Monster Survivors | Online Survival Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://www.MonsterSurvivors.com">
+    <style>
+        body {
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+        }
+        .game-container {
+            aspect-ratio: 16/9;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-6">
+            <h1 class="text-4xl font-bold text-gray-900">Monster Survivors</h1>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <section class="mb-12">
+            <p class="text-xl text-gray-700 mb-8">Survive endless waves of monsters in this thrilling action-packed adventure game!</p>
+            
+            <div class="game-container w-full bg-gray-200 rounded-lg overflow-hidden mb-8">
+                <iframe 
+                    src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html" 
+                    class="w-full h-full" 
+                    frameborder="0" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">How to Play</h2>
+            <p class="text-gray-700 mb-4">Use arrow keys to move and mouse to attack. Collect power-ups to enhance your abilities.</p>
+            <ul class="list-disc list-inside text-gray-700">
+                <li>Survive as long as possible</li>
+                <li>Defeat monsters to earn points</li>
+                <li>Upgrade your weapons</li>
+            </ul>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Game Features</h2>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <li class="bg-white p-4 rounded-lg shadow-sm">
+                    <h3 class="font-semibold text-gray-900">Multiple Levels</h3>
+                    <p class="text-gray-700">Progress through increasingly challenging stages</p>
+                </li>
+                <li class="bg-white p-4 rounded-lg shadow-sm">
+                    <h3 class="font-semibold text-gray-900">Unique Monsters</h3>
+                    <p class="text-gray-700">Face different monsters with special abilities</p>
+                </li>
+                <li class="bg-white p-4 rounded-lg shadow-sm">
+                    <h3 class="font-semibold text-gray-900">Power-ups</h3>
+                    <p class="text-gray-700">Collect temporary boosts to help you survive</p>
+                </li>
+                <li class="bg-white p-4 rounded-lg shadow-sm">
+                    <h3 class="font-semibold text-gray-900">Leaderboards</h3>
+                    <p class="text-gray-700">Compete with players worldwide</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="bg-gray-100 py-6">
+        <div class="container mx-auto px-4 text-center text-gray-600">
+            <p>© 2023 Monster Survivors. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
