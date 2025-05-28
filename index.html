@@ -27,70 +27,32 @@
   </section>
 
   <!-- Game List -->
-  <section class="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" id="game-list">
-    <!-- Games will be injected here by JS -->
+  <section class="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6" id="game-list">
+    <div class="bg-white rounded-2xl shadow p-3">
+      <h3 class="text-lg font-bold mb-2">Flappy Bird</h3>
+      <iframe src="https://nebez.github.io/floppybird/" class="w-full h-96 border rounded-xl" frameborder="0"></iframe>
+    </div>
+    <div class="bg-white rounded-2xl shadow p-3">
+      <h3 class="text-lg font-bold mb-2">2048</h3>
+      <iframe src="https://play2048.co/" class="w-full h-96 border rounded-xl" frameborder="0"></iframe>
+    </div>
+    <div class="bg-white rounded-2xl shadow p-3">
+      <h3 class="text-lg font-bold mb-2">贪吃蛇</h3>
+      <iframe src="https://jsnake.netlify.app/" class="w-full h-96 border rounded-xl" frameborder="0"></iframe>
+    </div>
+    <div class="bg-white rounded-2xl shadow p-3">
+      <h3 class="text-lg font-bold mb-2">俄罗斯方块</h3>
+      <iframe src="https://cwilso.github.io/HTML5-Tetris/" class="w-full h-96 border rounded-xl" frameborder="0"></iframe>
+    </div>
+    <div class="bg-white rounded-2xl shadow p-3">
+      <h3 class="text-lg font-bold mb-2">恐龙快跑</h3>
+      <iframe src="https://offline-dino-game.firebaseapp.com/" class="w-full h-96 border rounded-xl" frameborder="0"></iframe>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-white text-center text-sm text-gray-400 p-4">
     © 2025 H5游戏小站 | 联系我们：game@example.com
   </footer>
-
-  <script>
-    const games = [
-      {
-        title: "Flappy Bird",
-        description: "点击控制小鸟飞行，避开水管！",
-        image: "/games/flappybird.jpg",
-        link: "/games/flappybird",
-        category: "休闲",
-      },
-      {
-        title: "2048",
-        description: "合并相同数字，挑战你的脑力！",
-        image: "/games/2048.jpg",
-        link: "/games/2048",
-        category: "益智",
-      },
-      {
-        title: "贪吃蛇",
-        description: "控制蛇吃食物，变得更长！",
-        image: "/games/snake.jpg",
-        link: "/games/snake",
-        category: "经典",
-      },
-    ];
-
-    const categoryButtons = document.querySelectorAll('.category-btn');
-    const gameList = document.getElementById('game-list');
-
-    function renderGames(filter) {
-      gameList.innerHTML = '';
-      const filtered = filter === '全部' ? games : games.filter(g => g.category === filter);
-      filtered.forEach(game => {
-        const div = document.createElement('div');
-        div.className = "bg-white rounded-2xl shadow p-3 hover:shadow-lg transition";
-        div.innerHTML = `
-          <img src="${game.image}" alt="${game.title}" class="w-full h-40 object-cover rounded-xl" />
-          <h3 class="mt-2 text-lg font-bold">${game.title}</h3>
-          <p class="text-sm text-gray-500">${game.description}</p>
-          <a href="${game.link}" class="mt-2 inline-block bg-blue-500 text-white px-3 py-1 rounded-full text-sm">开始游戏</a>
-        `;
-        gameList.appendChild(div);
-      });
-    }
-
-    categoryButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        categoryButtons.forEach(b => b.classList.replace('bg-blue-500', 'bg-white'));
-        categoryButtons.forEach(b => b.classList.replace('text-white', 'text-gray-700'));
-        btn.classList.replace('bg-white', 'bg-blue-500');
-        btn.classList.replace('text-gray-700', 'text-white');
-        renderGames(btn.textContent);
-      });
-    });
-
-    renderGames('全部');
-  </script>
 </body>
 </html>
